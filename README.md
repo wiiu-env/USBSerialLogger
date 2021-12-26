@@ -1,19 +1,19 @@
 # USB Serial Logging
 
 ## Usage
-Place the `20_usb_serial_logging.rpx` in the `[ENVIROMENT]/modules/setup` folder and run the [EnvironmentLoader](https://github.com/wiiu-env/EnvironmentLoader).
-Requires [MochaPayload](https://github.com/wiiu-env/MochaPayload) as a setup module in `[ENVIROMENT]/modules/setup`.
+Place the `20_usb_serial_logging.rpx` in the `[ENVIRONMENT]/modules/setup` folder and run the [EnvironmentLoader](https://github.com/wiiu-env/EnvironmentLoader).
+Requires [MochaPayload](https://github.com/wiiu-env/MochaPayload) as a setup module in `[ENVIRONMENT]/modules/setup`.
 
 Requires a USB serial cable with FTDI FT232 chipset (e.g. Digitus DA-70156) and [TeraTerm](https://ttssh2.osdn.jp/index.html.en), or similar serial terminal program.
 
 Settings:
-    - Speed: 57600
-    - Data: 8 bit
-    - Parity: none
-    - Stop bits: 1 bit
-    - Flow control: none
-    - New-line Receive: CR+LF
-    - New-line Transmit: CR+LF
+ - Speed: 57600
+ - Data: 8 bit
+ - Parity: none
+ - Stop bits: 1 bit
+ - Flow control: none
+ - New-line Receive: CR+LF
+ - New-line Transmit: CR+LF
     
 The IOP-Shell is not supported.
 
