@@ -3,10 +3,18 @@ name: CI-PR
 on: [pull_request]
 
 jobs:
-  build-binary:
+  clang-format:
     runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
+    - name: clang-format
+      run: |
+        docker run --rm -v ${PWD}:/src ghcr.io/wiiu-env/clang-format:13.0.0-2 -r ./source
+  build-binary:
+    runs-on: ubuntu-22.04
+    needs: clang-format
+    steps:
+    - uses: actions/checkout@v3
     - name: build binary
       run: |
         docker build . -t builder
